@@ -318,7 +318,7 @@ public class Processing extends Thread {
     private void setupLogs() {
         // Получаем путь, по которому будут сохраняться логи обработки заявлений на ВС "Регистрация номеров M-to-M посредством ЕПГУ"
         // В имя файла добавляется дата обработки заявления. Каждый день пишутся новые логи.
-        String localDate = "_" + LocalDate.now().toString() + ".cvs";
+        String localDate = "_" + LocalDate.now().toString() + ".csv";
         try {
             // Создаем лог для обработанных заявлений на ВС "Регистрация корпоративного номера телефона"
             Path activateNumberLogPath = Paths.get(props.getProperty("ACTIVATE_NUMBER_LOG") + localDate);
